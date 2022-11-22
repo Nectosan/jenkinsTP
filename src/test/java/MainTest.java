@@ -2,8 +2,11 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+public class MainTest {
 
+    public MainTest(){
+
+    }
     @Test
     public void getString(){
         String msg = "Hellow";
