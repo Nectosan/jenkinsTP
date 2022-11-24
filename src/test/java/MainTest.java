@@ -9,7 +9,9 @@ public class MainTest {
     }
     @Test
     public void getString(){
-        String msg = "Hellow";
-        assertEquals("Hellow",msg);
+        String msg = "Hello";
+        assertEquals("Hello",msg);
     }
+
+
 }
