@@ -9,8 +9,8 @@ public class MainTest {
     }
     @Test
     public void getString(){
-        String msg = "Hello world";
-        assertEquals("Hello world",msg);
+        String msg = "Hello ";
+        assertEquals("Hello",msg);
     }
 
 
