@@ -27,9 +27,9 @@ pipeline{
             }
             stage('Build the docker image') {
                 steps{
-                    withCredentials([usernameColonPassword(credentialsId: 'dockerhubpass', variable:'dockerHubPass')]){
+                    withCredentials([usernamePassword(credentialsId: 'dockerhubpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
 
-                        bat """docker login -u rihci -p Dubacu60!=RC"""
+                        bat "docker login -u $USERNAME -p $PASSWORD"
                     }
                     bat "docker build -t rihci/triang7:1.0.0 ."
                     bat "docker push rihci/triang7:1.0.0"
