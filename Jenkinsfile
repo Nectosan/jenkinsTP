@@ -41,6 +41,12 @@ pipeline{
                         bat "docker login -u $USERNAME -p $PASSWORD"
                     }
                     bat "docker build -t rihci/triang7:1.0.0 ."
+
+                }
+            }
+
+            stage('Push to DockerHub'){
+                steps{
                     bat "docker push rihci/triang7:1.0.0"
                 }
             }
