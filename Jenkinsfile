@@ -7,6 +7,14 @@ pipeline{
             jdk 'jdk-11.0.16.1'
         }
 
+    post{
+
+       always{
+       emailText body: 'Ce Build $BUILD_NUMBER',
+       recipientProviders:[requester()], subject: ’build’, to:'richard91480@gmail.com'
+
+    }
+
         stages{
             stage('git checkout'){
                 steps{
