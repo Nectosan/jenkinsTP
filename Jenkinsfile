@@ -10,7 +10,7 @@ pipeline{
     post{
 
        always{
-       emailText body: 'Ce Build $BUILD_NUMBER',
+       emailtext body: 'Ce Build $BUILD_NUMBER',
        recipientProviders:[requestor()], subject: 'build', to:'richard91480@gmail.com'
 
         }
